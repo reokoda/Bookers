@@ -1,0 +1,13 @@
+<h1><%= link_to "Books", books_path %></h1>
+
+<h2>Edit</h2>
+<%= form_with model:@book, local:true do |f| %>
+    <h4>Title</h4>
+    <%= f.text_field :title %>
+    <h4>Body</h4>
+    <%= f.text_area :body %>
+    
+    <%= f.submit 'Save Book' %>
+<% end %>
+
+
