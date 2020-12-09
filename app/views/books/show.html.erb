@@ -11,16 +11,6 @@
         <td><%= link_to "Edit", edit_book_path(@book) %></td>
         <td><%= link_to "Destroy", book_path(@book), method: :delete %></td>
     </tr>
-    
-    <%= form_with model:@book, local:true do |f| %>
-        <% if @book.errors.any? %>
-        <ul>
-          <% @book.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>   
-        <% end %>
-    <% end %>
 </table>
 
 
